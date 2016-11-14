@@ -45,7 +45,15 @@ $("#link3").click(function(event) {
 <h1>차병철</h1>
 <h1>차병철</h1>
 <h1>차병철</h1>
+<<<<<<< HEAD
 <h1>차병철아하ss</h1>
+=======
+
+<h1> 나는 유수영</h1>
+<h1> 나는 유수영</h1>
+<h1> 나는 유수영</h1>
+<h1> 나는 유수영</h1>
+>>>>>>> branch 'master' of https://github.com/Imvely/java87_ex.git
 </body>
 </html>
 
