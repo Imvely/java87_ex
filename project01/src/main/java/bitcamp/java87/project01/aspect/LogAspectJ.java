@@ -6,7 +6,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
  * FileName : PojoAspectJ.java
   */
 public class LogAspectJ {
-
+ 
 	///Constructor
 	public LogAspectJ() {
 		System.out.println("\nCommon :: "+this.getClass()+"\n");
