@@ -10,7 +10,7 @@ public class LogAspectJ {
 	///Constructor
 	public LogAspectJ() {
 		System.out.println("\nCommon :: "+this.getClass()+"\n");
-	}
+	} 
 	
 	//Around  Advice
 	public Object invoke(ProceedingJoinPoint joinPoint) throws Throwable {
