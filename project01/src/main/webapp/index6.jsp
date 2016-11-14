@@ -45,7 +45,7 @@ $("#link3").click(function(event) {
 <h1>차병철</h1>
 <h1>차병철</h1>
 <h1>차병철</h1>
-<h1>차병철</h1>
+
 </body>
 </html>
 
