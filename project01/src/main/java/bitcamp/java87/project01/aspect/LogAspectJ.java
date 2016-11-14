@@ -7,7 +7,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
   */
 public class LogAspectJ {
    //aaaadd
-	///Constructor
+	///Constructorddd
 	public LogAspectJ() {
 		System.out.println("\nCommon :: "+this.getClass()+"\n");
 	} 
