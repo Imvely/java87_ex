@@ -13,13 +13,14 @@
 /*
         *{
             box-sizing: border-box;
+            
         }
        
+*/
         body{
             margin:0px;
           
         }
-*/
       #columns{
         column-width:200px;
         column-gap: 15px;
@@ -27,6 +28,7 @@
         margin:10px 250px;
       }
       #columns figure{
+        
         display: inline-block;
         border:1px solid rgba(0,0,0,0.2);
         margin:0;
@@ -37,6 +39,7 @@
           
       }
       #columns figure img{
+          
         width:100%;
        
         border-top-left-radius: 3px;
@@ -58,37 +61,80 @@
         font-family: 'Nanum Gothic';
       }
         #nav{
+/*              position: fixed;*/
             border:3px solid rgba(78, 184, 224, 0.2);
             background: #4EB8E0;
             width: 100%;
-            height: 30px;
+            height: 35px;
             margin:0px;
         }
+/*
          #menu{
+           
+               border-radius: 3px;
+            
+             align-content: center;
+             align-items: center;
+             display: flex;
+            justify-content: center;
+              position: relative;
+             left: 39%;
         
-            border:3px solid rgba(128, 128, 128, 0.2);
+            border:3px solid rgba(128, 128, 128, 0.5);
             width: 22%;
             height: 40px;
             margin-top: 10px;
-             margin-bottom: 10px;
-             
+             margin-bottom: 30px;
+           
              background: gray;
 
+        }
+        .menu_btn{
+          font-size: 2em;
+            padding-top: 9px;
+            text-align:center;
+            
+        
+            margin: 3px;
+            display: inline-block;
+          
+       
+            background: white;
+            width: 33%;
+            height:80%;
+            
+                
+        }
+*/
+        #new{
+            position: fixed;
+         
+            bottom: 50px;
+            right: 50px;
+            
         }
     </style>
   </head>
   <body>
+      <div id="new">
+      <img src="img/btn.png">
+      </div>
       
       <div id="nav">
       
       
       
       </div>
-       <div id="menu">
+<!--
+       <div id="menu" >
+           <span class="menu_btn">hot</span>
+           <span class="menu_btn">new</span>
+           <span class="menu_btn">my pick</span>
       
       
       
       </div>
+-->
     <div id="columns">
               <figure>
         <img src="img/card1.jpg">
