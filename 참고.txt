@@ -1,0 +1,26 @@
+1. 로그인 and 회원 가입       signUpAndLoginView.jsp       /css/signUpAndLogin.css     /js/signUpAndLogin.js     
+2. 관심사 선택 뷰	     interestView.jsp            /css/interest.css  	  /js/interest.js
+3. 메인      뷰              mainView.jsp                /css/main.css         	  /js/main.js
+4. 투표 등록 뷰              voteRegisterView.jsp        /css/voteRegister.css       /js/voteRegister.js
+5. 결과 뷰 - 	찬반	     prosAndConsResultView.jsp    /css/prosAndConsResult.css   /js/prosAndConsResult.js
+		1 vs 1       multiResultView.jsp	/css/multiResult.css	   /js/multiResult.js
+		선택         selectOneResultView.jsp    /css/selectOneResult.css   /js/selectOneResult.js
+
+
+
+주의.
+1. css 링크는 <head>태그 안에 넣을것 
+ex)  <head>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+     </head>
+
+2. javaScript 소스 , 링크 <body> 태그 제일 끝에 넣을것
+	<script src="js/index.js"></script>
+    </body>
+
+3. css,javascript 링크 주석 달기 
+		<!-- BootStrap -->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<!--Jquery-->
+		<script	 src='node_modules/jquery/dist/jquery.js'></script>
