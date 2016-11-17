@@ -1,0 +1,643 @@
+<!doctype html>
+<html>
+  <head>
+    
+		<title>PICK!</title>
+		<meta charset="utf-8" />
+      
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+      
+      
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="fontello-42ce8501/css/fontello.css">
+	  <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Signika" rel="stylesheet"> 
+          
+
+	
+    <style>
+        
+        
+        
+        
+        
+#navi {
+    height: 46px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+        
+     
+        .main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px; /* Used in this example to enable scrolling */
+}
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                    .container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+    
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+        
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #a5a5a5;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+/*
+        *{
+            box-sizing: border-box;
+            
+        }
+       
+*/
+        body{
+            
+            margin:auto 0px;
+          
+        }
+      #columns{
+        column-width:200px;
+        column-gap: 15px;
+/*
+          min-width: 200px;
+          max-width: 200px;
+*/
+    
+        margin:10px 250px 10px 250px;
+         
+      }
+      #columns figure{
+        
+        display: inline-block;
+        border:1px solid rgba(0,0,0,0.2);
+        margin:0;
+        margin-bottom: 15px;
+        padding:0px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        border-radius: 3px;
+          
+      }
+      #columns figure img{
+          
+        width:100%;
+       
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+          padding-bottom:0px;
+      }
+         .i{
+            text-align: right;
+            font-size: 0.6rem;
+             padding:3px;
+        }
+      #columns figure figcaption{
+        border-top:1px solid rgba(0,0,0,0.2);
+        padding:10px;
+          font-size: 0.8rem;
+          color:#333333;
+        margin-top:0px;
+        text-align: left;
+        font-family: 'Nanum Gothic';
+      }
+        #nav{
+/*              position: fixed;*/
+            border:3px solid rgba(78, 184, 224, 0.2);
+            background: #4EB8E0;
+            width: 100%;
+            height: 35px;
+            margin:0px;
+        }
+         #menu{
+             
+             
+             margin : 30px auto 30px auto;
+
+           padding: 2px;
+               border-radius: 3px;
+            
+             align-content: center;
+             align-items: center;
+             display:flex;
+            justify-content: center;
+           
+     
+        
+/*            border:3px solid rgba(128, 128, 128, 0.5);*/
+            width: 45%;
+            height: 40px;
+         
+           
+             background: gray;
+
+        }
+        .menu_btn{
+            display: table-cell;
+            vertical-align: middle;
+/*            align-content: center center ;*/
+/*
+            position: relative;
+            top: 10px;
+*/
+            
+            flex-basis: 30%;
+/*             flex-grow: 1;*/
+          font-size: 1.2rem;
+/*            padding: auto auto;*/
+/*            padding-top: 9px;*/
+            text-align:center;
+            flex-shrink: 0;
+            margin-right: 11px;
+            
+        
+/*            margin: 3px;*/
+/*            display: inline-block;*/
+          
+       
+            background: white;
+  
+            height:80%;
+            
+                
+        }
+        .menu_btn:nth-child(1){
+            margin-left:11px;
+            
+        }
+        #new{
+            background-color: rgb(78, 184, 224);
+            display: inline-block;
+            position: fixed;
+            border-radius: 100%;
+            margin: 0px;
+            padding: 0px;
+         
+            bottom: 50px;
+            right: 50px;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+            
+        }
+        #new img{
+            display: block;
+            padding: 0px;
+            margin: 0px;
+        }
+/*
+        @media(max-width:250px){
+             #columns {
+            display: block;
+        
+        
+  }
+*/
+        
+        
+   
+        
+    </style>
+  </head>
+  <body>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      <div id="navi">
+          
+      </div>
+      
+      
+
+                  <div class="dropdown">
+                <div class="container" onclick="myFunction(this)">
+                      <div class="bar1"></div>
+                      <div class="bar2"></div>
+                      <div class="bar3"></div>
+                    </div>
+                
+                
+<!--              <button class="dropbtn"><a href="#" class="icon-menu"><span class="label"></span></a></button>-->
+              <div class="dropdown-content">
+                <a href="#">Optional</a>
+                <a href="#">sex</a>
+                <a href="#">
+                        <label class="radio-inline">
+                          <input type="radio" name="optradio">All
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="optradio">Male
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="optradio">Female
+                        </label>
+                 </a>
+                  <a href="#">age</a>
+                  <a href="#">subject</a>
+                  <a href="#">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" value="">computer
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" value="">cook
+                        </label>
+                  
+                  </a>
+                  <a href="#">
+                  
+                     <label class="checkbox-inline">
+                          <input type="checkbox" value="">travel
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" value="">.etc
+                        </label>
+                  
+                  </a>
+                  <a href="#">progress</a>
+                  <a href="#">
+                      <label class="checkbox-inline">
+                          <input type="checkbox" value="">ongoing
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" value="">closed
+                        </label></a>
+                   <a href="#">
+                        <button class="dropbtn">RESET</button>
+                       <button class="dropbtn">OK!</button>
+                  </a>
+                  
+              </div>
+            </div>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+<!--
+      
+      <div id="nav">
+      
+      
+      
+      </div>
+-->
+       <div id="menu" >
+           <span class="menu_btn">hot</span>
+           <span class="menu_btn">new</span>
+           <span class="menu_btn">My pick</span>
+      
+      
+      
+      </div>
+<!--
+        <ul id="menu" >
+           <li class="menu_btn">hot</li>
+           <li class="menu_btn">new</li>
+           <li class="menu_btn">My pick</li>
+      
+      
+      
+      </ul>
+-->
+    <div id="columns">
+              <figure>
+        <img src="image/card1.jpg">
+        <figcaption>어떤 인테리어가 나을까요? <br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i>
+            
+          </figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card2.jpg">
+        <figcaption>토익책 좀 골라주세요 ㅠㅠ<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card3.jpg">
+        <figcaption>성선설 VS 성악설<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card4.jpg">
+        <figcaption>짜장면 VS 짬뽕<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card5.jpg">
+        <figcaption>요즘 잘나가는 자동차!!<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card6.jpg">
+        <figcaption>누가 제일 잘생겼나요??<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card7.jpg">
+        <figcaption>여름 휴가 여행지<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>    
+
+      <figure>
+        <img src="image/card8.jpg">
+        <figcaption>생일선물 추천<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card9.jpg">
+        <figcaption>서울 야경 추천<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i> </figcaption>
+      </figure>	
+              <figure>
+        <img src="image/card1.jpg">
+        <figcaption>어떤 인테리어가 나을까요? <br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i>
+            
+          </figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card2.jpg">
+        <figcaption>토익책 좀 골라주세요 ㅠㅠ<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card3.jpg">
+        <figcaption>성선설 VS 성악설<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card4.jpg">
+        <figcaption>짜장면 VS 짬뽕<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card5.jpg">
+        <figcaption>요즘 잘나가는 자동차!!<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card6.jpg">
+        <figcaption>누가 제일 잘생겼나요??<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card7.jpg">
+        <figcaption>여름 휴가 여행지<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>    
+
+      <figure>
+        <img src="image/card8.jpg">
+        <figcaption>생일선물 추천<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card9.jpg">
+        <figcaption>서울 야경 추천<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i> </figcaption>
+      </figure>	
+        
+      <figure>
+        <img src="image/card1.jpg">
+        <figcaption>어떤 인테리어가 나을까요? <br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i>
+            
+          </figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card2.jpg">
+        <figcaption>토익책 좀 골라주세요 ㅠㅠ<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card3.jpg">
+        <figcaption>성선설 VS 성악설<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card4.jpg">
+        <figcaption>짜장면 VS 짬뽕<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card5.jpg">
+        <figcaption>요즘 잘나가는 자동차!!<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card6.jpg">
+        <figcaption>누가 제일 잘생겼나요??<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card7.jpg">
+        <figcaption>여름 휴가 여행지<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>    
+
+      <figure>
+        <img src="image/card8.jpg">
+        <figcaption>생일선물 추천<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i></figcaption>
+      </figure>
+
+      <figure>
+        <img src="image/card9.jpg">
+        <figcaption>서울 야경 추천<br/>
+                    <b>~ 16.12.13</b><br/>
+                    <i class="i">count 392</i> </figcaption>
+      </figure>	
+    </div>
+<!--
+      <div>
+      <button type="button" class="btn btn-info">Button</button></div>
+-->
+          <span id="new">
+      <img src="image/btn.png">
+      </span>
+      <script src="menu.js"></script>
+	
+  </body>
+</html>
